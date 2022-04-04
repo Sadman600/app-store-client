@@ -5,6 +5,8 @@ import Review from '../Review/Review';
 import './Reviews.css';
 const Reviews = () => {
     const [reviews, setReviews] = useReviews();
+    // const newReviews = reviews.slice(0, 3);
+
     return (
         <div className='reviews-container'>
             {
@@ -13,6 +15,7 @@ const Reviews = () => {
                     review={review}
                 ></Review>)
             }
+
         </div>
     );
 };

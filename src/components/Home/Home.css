@@ -44,6 +44,18 @@
     font-size: large;
 }
 
+.reviews-row {
+    padding: 10px;
+}
+
+.customers-reviews {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
 @media screen and (max-width: 700px) {
     .row {
         flex-direction: column;

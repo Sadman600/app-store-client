@@ -1,8 +1,12 @@
 import logo from '../img/img_app.jpg';
 import React from 'react';
 import './Home.css';
+import useReviews from '../hook/useReviews';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
+    const [reviews, setReviews] = useReviews();
+
     return (
         <section className="container">
             <div className='row'>
@@ -19,6 +23,23 @@ const Home = () => {
                 </div>
                 <div className='right-column'>
                     <img src={logo} alt='img'></img>
+                </div>
+            </div>
+            <div className='reviews-row'>
+                <div className='reviews-column'>
+                    <h1 style={{ fontSize: '25px', color: 'tomato' }}>Customers Reviews(3)</h1>
+                    <div className='customers-reviews'>
+                        {
+                            reviews.slice(0, 3).map(review => <div className='review'>
+                                <img src={review.image} alt="Avatar" style={{ width: "100px", height: '100px' }} />
+                                <div>
+                                    <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
+                                    <p>John Doe saved us from a web disaster.</p>
+                                </div>
+                            </div>)
+                        }
+                    </div>
+                    <button className="button"><Link to='/reviews'>See All Reviews</Link></button>
                 </div>
             </div>
         </section>

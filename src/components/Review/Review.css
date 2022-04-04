@@ -10,3 +10,9 @@
     padding: 10px;
     border-radius: 50%;
 }
+
+@media screen and (max-width: 700px) {
+    .review {
+        flex-direction: column;
+    }
+}
