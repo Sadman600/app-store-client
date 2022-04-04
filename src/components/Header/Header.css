@@ -1,0 +1,23 @@
+.header-container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.topnav a:link,
+a:visited {
+    background-color: seagreen;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 14px 16px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.topnav a:hover {
+    background-color: green;
+}
+
+.topnav a:active {
+    background-color: red;
+}
