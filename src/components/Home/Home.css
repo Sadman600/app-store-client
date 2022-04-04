@@ -1,0 +1,51 @@
+.container {
+    /* border: 1px dotted red; */
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.row {
+    display: flex;
+}
+
+.left-column {
+    /* border: 1px dashed green; */
+    padding-left: 20px;
+    text-align: left;
+}
+
+.right-column {
+    /* border: 1px dashed green; */
+    padding-left: 20px;
+    text-align: left;
+}
+
+.left-column p {
+    font-family: verdana;
+    font-size: 18px;
+}
+
+.xlarge-font {
+    font-size: 64px;
+}
+
+.large-font {
+    font-size: 60px;
+    color: mediumseagreen;
+}
+
+.button {
+    background-color: seagreen;
+    padding: 14px 28px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
