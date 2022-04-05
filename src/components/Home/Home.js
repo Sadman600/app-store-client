@@ -1,12 +1,19 @@
 import logo from '../img/img_app.jpg';
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
 import useReviews from '../hook/useReviews';
 import { Link } from 'react-router-dom';
+import { Rating } from 'react-simple-star-rating';
 
 const Home = () => {
     const [reviews, setReviews] = useReviews();
+    const [rating, setRating] = useState(50)
 
+    // Catch Rating value
+    const handleRating = (rate) => {
+        setRating(rate)
+        // other logic
+    }
     return (
         <section className="container">
             <div className='row'>
@@ -33,8 +40,11 @@ const Home = () => {
                             reviews.slice(0, 3).map(review => <div className='review'>
                                 <img src={review.image} alt="Avatar" style={{ width: "100px", height: '100px' }} />
                                 <div>
-                                    <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
-                                    <p>John Doe saved us from a web disaster.</p>
+                                    <p><span>Name: {review.name}</span></p>
+                                    <p>Comment:- {review.body.slice(0, 70)}</p>
+                                    <div>
+                                        <Rating onClick={handleRating} ratingValue={rating}></Rating>
+                                    </div>
                                 </div>
                             </div>)
                         }

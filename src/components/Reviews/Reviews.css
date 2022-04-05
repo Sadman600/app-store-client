@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
-    margin-left: 64px;
-    margin-right: 64px;
+    /* margin-left: 64px; */
+    margin: 64px;
     /* padding: 20px; */
 }
 
