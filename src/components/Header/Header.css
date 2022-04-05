@@ -3,6 +3,12 @@
     padding: 20px;
 }
 
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .topnav a:link,
 a:visited {
     background-color: seagreen;
@@ -20,4 +26,12 @@ a:visited {
 
 .topnav a:active {
     background-color: red;
+}
+
+@media screen and (max-width: 700px) {
+
+    .topnav {
+        flex-direction: column;
+        width: 100%;
+    }
 }

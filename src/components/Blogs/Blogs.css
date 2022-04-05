@@ -1,0 +1,26 @@
+.blog-row,
+.blog-row2 {
+    display: flex;
+    margin-left: 64px;
+    margin-right: 64px;
+}
+
+.blog-column {
+    width: 50%;
+    padding: 15px;
+    text-align: left;
+}
+
+.blog-column2 {
+    width: 33%;
+    padding: 15px;
+    text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+
+    .blog-row,
+    .blog-row2 {
+        flex-direction: column;
+    }
+}
